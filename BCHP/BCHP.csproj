@@ -49,6 +49,12 @@
     <Compile Include="DAL\CTHoaDonDAL.cs" />
     <Compile Include="DAL\DatabaseHelper.cs" />
     <Compile Include="DAL\HoaDonDAL.cs" />
+    <Compile Include="frmban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmban.Designer.cs">
+      <DependentUpon>frmban.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBanBanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmban.resx">
+      <DependentUpon>frmban.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBanBanh.resx">
       <DependentUpon>frmBanBanh.cs</DependentUpon>
     </EmbeddedResource>
