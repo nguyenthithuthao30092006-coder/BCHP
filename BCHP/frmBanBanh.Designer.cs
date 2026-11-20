@@ -54,6 +54,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grpChonBanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.grpKhachHang.SuspendLayout();
@@ -294,11 +295,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ngueyenx thị thu thảo";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Location = new System.Drawing.Point(744, 335);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 100);
+            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
             // frmBanBanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 781);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnXoa);
@@ -347,6 +358,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
