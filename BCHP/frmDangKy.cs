@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using BCHP.DAL;
 
-namespace BCHP.Forms
+
+namespace BCHP
 {
     public partial class frmDangKy : Form
     {

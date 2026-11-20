@@ -1,7 +1,7 @@
 ﻿using System.Data.SqlClient;
 using System.Configuration;
 
-namespace BCHP.DAL
+namespace BCHP
 {
     // Lớp trợ giúp CSDL (đề bài BT7.2: viết lớp DatabaseHelper)
     public static class DatabaseHelper
