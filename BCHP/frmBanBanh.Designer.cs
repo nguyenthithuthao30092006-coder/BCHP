@@ -42,9 +42,17 @@
             this.lblMaBanh = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.grpKhachHang = new System.Windows.Forms.GroupBox();
-            this.radKhachLe = new System.Windows.Forms.RadioButton();
-            this.radTV = new System.Windows.Forms.RadioButton();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.rdoKhachLe = new System.Windows.Forms.RadioButton();
+            this.rdoTV = new System.Windows.Forms.RadioButton();
+            this.lvBanh = new System.Windows.Forms.ListView();
+            this.colMa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colBanh = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colSoLuong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colKichCo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colDonGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colThanhTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.grpChonBanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.grpKhachHang.SuspendLayout();
@@ -65,7 +73,7 @@
             this.grpChonBanh.Controls.Add(this.lblMaBanh);
             this.grpChonBanh.Location = new System.Drawing.Point(22, 12);
             this.grpChonBanh.Name = "grpChonBanh";
-            this.grpChonBanh.Size = new System.Drawing.Size(549, 319);
+            this.grpChonBanh.Size = new System.Drawing.Size(588, 319);
             this.grpChonBanh.TabIndex = 0;
             this.grpChonBanh.TabStop = false;
             this.grpChonBanh.Text = "Chọn bánh";
@@ -166,7 +174,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(43, 349);
+            this.btnThem.Location = new System.Drawing.Point(38, 354);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(191, 49);
             this.btnThem.TabIndex = 1;
@@ -175,52 +183,115 @@
             // 
             // grpKhachHang
             // 
-            this.grpKhachHang.Controls.Add(this.radTV);
-            this.grpKhachHang.Controls.Add(this.radKhachLe);
+            this.grpKhachHang.Controls.Add(this.rdoTV);
+            this.grpKhachHang.Controls.Add(this.rdoKhachLe);
             this.grpKhachHang.Location = new System.Drawing.Point(22, 423);
             this.grpKhachHang.Name = "grpKhachHang";
-            this.grpKhachHang.Size = new System.Drawing.Size(549, 87);
+            this.grpKhachHang.Size = new System.Drawing.Size(588, 87);
             this.grpKhachHang.TabIndex = 2;
             this.grpKhachHang.TabStop = false;
             this.grpKhachHang.Text = "Khách hàng ";
             // 
-            // radKhachLe
+            // rdoKhachLe
             // 
-            this.radKhachLe.AutoSize = true;
-            this.radKhachLe.Location = new System.Drawing.Point(67, 42);
-            this.radKhachLe.Name = "radKhachLe";
-            this.radKhachLe.Size = new System.Drawing.Size(101, 26);
-            this.radKhachLe.TabIndex = 0;
-            this.radKhachLe.TabStop = true;
-            this.radKhachLe.Text = "Khách lẻ";
-            this.radKhachLe.UseVisualStyleBackColor = true;
+            this.rdoKhachLe.AutoSize = true;
+            this.rdoKhachLe.Checked = true;
+            this.rdoKhachLe.Location = new System.Drawing.Point(67, 42);
+            this.rdoKhachLe.Name = "rdoKhachLe";
+            this.rdoKhachLe.Size = new System.Drawing.Size(101, 26);
+            this.rdoKhachLe.TabIndex = 0;
+            this.rdoKhachLe.TabStop = true;
+            this.rdoKhachLe.Text = "Khách lẻ";
+            this.rdoKhachLe.UseVisualStyleBackColor = true;
             // 
-            // radTV
+            // rdoTV
             // 
-            this.radTV.AutoSize = true;
-            this.radTV.Location = new System.Drawing.Point(265, 42);
-            this.radTV.Name = "radTV";
-            this.radTV.Size = new System.Drawing.Size(171, 26);
-            this.radTV.TabIndex = 1;
-            this.radTV.TabStop = true;
-            this.radTV.Text = "Thành viên (-5%)";
-            this.radTV.UseVisualStyleBackColor = true;
+            this.rdoTV.AutoSize = true;
+            this.rdoTV.Location = new System.Drawing.Point(265, 42);
+            this.rdoTV.Name = "rdoTV";
+            this.rdoTV.Size = new System.Drawing.Size(171, 26);
+            this.rdoTV.TabIndex = 1;
+            this.rdoTV.Text = "Thành viên (-5%)";
+            this.rdoTV.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lvBanh
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(22, 528);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(549, 97);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lvBanh.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colMa,
+            this.colBanh,
+            this.colSoLuong,
+            this.colKichCo,
+            this.colDonGia,
+            this.colThanhTien});
+            this.lvBanh.FullRowSelect = true;
+            this.lvBanh.GridLines = true;
+            this.lvBanh.HideSelection = false;
+            this.lvBanh.Location = new System.Drawing.Point(22, 533);
+            this.lvBanh.MultiSelect = false;
+            this.lvBanh.Name = "lvBanh";
+            this.lvBanh.Size = new System.Drawing.Size(731, 127);
+            this.lvBanh.TabIndex = 3;
+            this.lvBanh.UseCompatibleStateImageBehavior = false;
+            this.lvBanh.View = System.Windows.Forms.View.Details;
+            // 
+            // colMa
+            // 
+            this.colMa.Text = "Mã bánh";
+            this.colMa.Width = 85;
+            // 
+            // colBanh
+            // 
+            this.colBanh.Text = "Bánh";
+            this.colBanh.Width = 184;
+            // 
+            // colSoLuong
+            // 
+            this.colSoLuong.Text = "Số lượng";
+            this.colSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colSoLuong.Width = 92;
+            // 
+            // colKichCo
+            // 
+            this.colKichCo.Text = "Kích cỡ";
+            this.colKichCo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colKichCo.Width = 84;
+            // 
+            // colDonGia
+            // 
+            this.colDonGia.Text = "Đơn giá";
+            this.colDonGia.Width = 110;
+            // 
+            // colThanhTien
+            // 
+            this.colThanhTien.Text = "Thành tiền";
+            this.colThanhTien.Width = 110;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(77, 685);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(152, 49);
+            this.btnXoa.TabIndex = 4;
+            this.btnXoa.Text = "Xóa dòng";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnThanhToan
+            // 
+            this.btnThanhToan.Location = new System.Drawing.Point(276, 685);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(152, 49);
+            this.btnThanhToan.TabIndex = 5;
+            this.btnThanhToan.Text = "Thanh toán ";
+            this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
             // frmBanBanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 672);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1100, 781);
+            this.Controls.Add(this.btnThanhToan);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.lvBanh);
             this.Controls.Add(this.grpKhachHang);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grpChonBanh);
@@ -253,9 +324,17 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox grpKhachHang;
-        private System.Windows.Forms.RadioButton radTV;
-        private System.Windows.Forms.RadioButton radKhachLe;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.RadioButton rdoTV;
+        private System.Windows.Forms.RadioButton rdoKhachLe;
+        private System.Windows.Forms.ListView lvBanh;
+        private System.Windows.Forms.ColumnHeader colMa;
+        private System.Windows.Forms.ColumnHeader colBanh;
+        private System.Windows.Forms.ColumnHeader colSoLuong;
+        private System.Windows.Forms.ColumnHeader colKichCo;
+        private System.Windows.Forms.ColumnHeader colDonGia;
+        private System.Windows.Forms.ColumnHeader colThanhTien;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThanhToan;
     }
 }
 
