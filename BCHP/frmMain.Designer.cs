@@ -1,4 +1,4 @@
-﻿namespace BCHP.Forms
+﻿namespace BCHP
 {
     partial class frmMain
     {

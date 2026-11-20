@@ -1,9 +1,8 @@
 ﻿using System;
 using Microsoft.VisualBasic;
 using System.Windows.Forms;
-using BCHP.DAL;
 
-namespace BCHP.Forms
+namespace BCHP
 {
     public partial class frmDangNhap : Form
     {
