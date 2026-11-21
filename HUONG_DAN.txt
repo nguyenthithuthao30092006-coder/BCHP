@@ -1,0 +1,38 @@
+HƯỚNG DẪN - QUẢN LÝ DANH MỤC BÁNH (WinForms, Visual Studio 2022)
+
+CHẠY CHƯƠNG TRÌNH
+1. Giải nén file zip ra một thư mục bất kỳ (đừng chạy thẳng trong file zip).
+2. Bấm đúp QuanLyBanBanh.sln để mở bằng Visual Studio 2022.
+3. Bấm F5 (hoặc nút ▶ Start) để chạy.
+
+TỰ CHỈNH GIAO DIỆN BẰNG KÉO THẢ
+- Trong Solution Explorer, bấm đúp Form1.cs (hoặc chuột phải > View Designer).
+  Bạn sẽ thấy form với đầy đủ control.
+- Bấm vào một control để chọn, rồi:
+    + Kéo để di chuyển, kéo cạnh để đổi kích thước.
+    + Sửa chữ, màu, font... trong cửa sổ Properties (phím tắt F4).
+    + Kéo control mới từ Toolbox (View > Toolbox) vào form.
+- Nhãn "Đơn giá phải là bội số của 100" (lblDonGiaError) đang ẩn khi chạy
+  (Visible = False) nhưng vẫn thấy được trong Designer.
+- Thêm xử lý cho nút/ô nhập: bấm đúp vào control trong Designer,
+  Visual Studio tự tạo hàm sự kiện trong Form1.cs.
+- Mẹo: nên đặt tên control theo quy tắc tiền tố (btn, txt, cbo, lbl...) giống file này.
+
+CÁC FILE
+- Program.cs         : điểm khởi động, mở Form1.
+- Cake.cs            : mô hình dữ liệu (1 chiếc bánh gồm những thuộc tính gì).
+- Form1.cs           : phần XỬ LÝ: sự kiện, kiểm tra dữ liệu, dữ liệu mẫu.
+- Form1.Designer.cs  : phần GIAO DIỆN do Visual Studio tự sinh khi bạn kéo thả.
+                       Có thể sửa tay nhưng nên để Visual Studio quản lý.
+
+YÊU CẦU
+- Visual Studio 2022 có workload ".NET desktop development".
+- Project dùng .NET Framework 4.8 (có sẵn trên Windows 10/11).
+- Nếu báo thiếu "targeting pack for .NET Framework 4.8": mở Visual Studio Installer
+  > Modify > Individual components > tick ".NET Framework 4.8 targeting pack" > Install.
+
+LƯU Ý
+- Dữ liệu hiện lưu trong bộ nhớ: tắt chương trình là mất.
+  Bước tiếp theo nên làm là lưu vào SQLite hoặc SQL Server.
+- ĐỪNG đổi tên hoặc xóa các hàm sự kiện (btnThem_Click, txtSearch_TextChanged...)
+  nếu chưa gỡ chúng khỏi control trong Designer, nếu không form sẽ không biên dịch được.
