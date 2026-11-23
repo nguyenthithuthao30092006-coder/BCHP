@@ -53,10 +53,8 @@
             this.colThanhTien = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblHoaDon = new System.Windows.Forms.Label();
+            this.txtHoaDon = new System.Windows.Forms.TextBox();
             this.grpChonBanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.grpKhachHang.SuspendLayout();
@@ -288,49 +286,33 @@
             this.btnThanhToan.Text = "Thanh toán ";
             this.btnThanhToan.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // lblHoaDon
             // 
-            this.groupBox1.Location = new System.Drawing.Point(708, 77);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ngueyenx thị thu thảo";
+            this.lblHoaDon.AutoSize = true;
+            this.lblHoaDon.Location = new System.Drawing.Point(661, 23);
+            this.lblHoaDon.Name = "lblHoaDon";
+            this.lblHoaDon.Size = new System.Drawing.Size(83, 22);
+            this.lblHoaDon.TabIndex = 6;
+            this.lblHoaDon.Text = "Hóa đơn ";
             // 
-            // groupBox2
+            // txtHoaDon
             // 
-            this.groupBox2.Location = new System.Drawing.Point(744, 335);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 100);
-            this.groupBox2.TabIndex = 10;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(770, 253);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 30);
-            this.textBox1.TabIndex = 11;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Location = new System.Drawing.Point(810, 511);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 100);
-            this.groupBox3.TabIndex = 12;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.txtHoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtHoaDon.Font = new System.Drawing.Font("Consolas", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoaDon.Location = new System.Drawing.Point(665, 52);
+            this.txtHoaDon.Name = "txtHoaDon";
+            this.txtHoaDon.ReadOnly = true;
+            this.txtHoaDon.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtHoaDon.Size = new System.Drawing.Size(450, 27);
+            this.txtHoaDon.TabIndex = 7;
             // 
             // frmBanBanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 781);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1138, 781);
+            this.Controls.Add(this.txtHoaDon);
+            this.Controls.Add(this.lblHoaDon);
             this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lvBanh);
@@ -378,10 +360,8 @@
         private System.Windows.Forms.ColumnHeader colThanhTien;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThanhToan;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblHoaDon;
+        private System.Windows.Forms.TextBox txtHoaDon;
     }
 }
 
